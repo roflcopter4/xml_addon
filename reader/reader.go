@@ -112,7 +112,7 @@ func (r *XMLTextReader) MoveToFirstAttribute() error {
 	return myXMLclib.XMLTextReaderMoveToFirstAttribute(r)
 }
 
-func (r *XMLTextReader) MoveToNextttribute() error {
+func (r *XMLTextReader) MoveToNextAttribute() error {
 	return myXMLclib.XMLTextReaderMoveToNextAttribute(r)
 }
 
