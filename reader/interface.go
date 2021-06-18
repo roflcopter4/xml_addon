@@ -50,6 +50,8 @@ type TextReader interface {
 	AttributeCount() int
 	Depth() int
 	MoveToAttributeNo(int) error
+	MoveToFirstAttribute() error
+	MoveToNextAttribute() error
 	MoveToElement() error
 	CurrentNode() (XMLtypes.Node, error)
 	SetParserProp(prop myXMLclib.XMLParserProperties, value int) error
