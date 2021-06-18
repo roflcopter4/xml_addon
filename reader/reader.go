@@ -74,7 +74,7 @@ func (r *XMLTextReader) AttributeCount() int {
 }
 
 func (r *XMLTextReader) Depth() int {
-	val, err := myXMLclib.XMLTextReaderAttributeCount(r)
+	val, err := myXMLclib.XMLTextReaderDepth(r)
 	if err != nil {
 		return (-1)
 	}
@@ -107,6 +107,14 @@ func (r *XMLTextReader) Value() string {
 
 /****************************************************************************************/
 // "Methods"
+
+func (r *XMLTextReader) MoveToFirstAttribute() error {
+	return myXMLclib.XMLTextReaderMoveToFirstAttribute(r)
+}
+
+func (r *XMLTextReader) MoveToNextttribute() error {
+	return myXMLclib.XMLTextReaderMoveToNextAttribute(r)
+}
 
 func (r *XMLTextReader) MoveToAttributeNo(no int) error {
 	return myXMLclib.XMLTextReaderMoveToAttributeNo(r, no)
